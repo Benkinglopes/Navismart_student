@@ -1,4 +1,4 @@
-# Navismart_student-
+# Navismart
 Code for project navismart, student module 
 
 #report,
