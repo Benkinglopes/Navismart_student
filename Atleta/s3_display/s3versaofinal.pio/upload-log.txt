@@ -1,0 +1,925 @@
+Processing esp32-s3-devkitc-1 (platform: espressif32; board: esp32-s3-devkitc-1; framework: arduino; monitor_speed: 115200; board_build.arduino.memory_type: qio_opi; board_build.flash_mode: qio; board_build.psram_type: opi; build_flags: -DBOARD_HAS_PSRAM, -mfix-esp32-psram-cache-issue, -D LV_CONF_INCLUDE_SIMPLE, -I include; lib_deps: lovyan03/LovyanGFX @ ^1.1.12, lvgl/lvgl @ 8.3.11, powerbroker2/SerialTransfer@^3.1.3)
+--------------------------------------------------------------------------------
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32-s3-devkitc-1.html
+PLATFORM: Espressif 32 (7.0.1) > Espressif ESP32-S3-DevKitC-1-N8 (8 MB QD, No PSRAM)
+HARDWARE: ESP32S3 240MHz, 320KB RAM, 8MB Flash
+DEBUG: Current (esp-builtin) On-board (esp-builtin) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.41100.0 (4.11.0) 
+ - tool-mkfatfs @ 2.0.1 
+ - tool-mklittlefs @ 1.203.210628 (2.3) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5 
+ - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 36 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- LovyanGFX @ 1.2.21 (License: MIT AND BSD-2-Clause, Path: C:\Users\berna\Desktop\codes_alunos\codes\s3versaofinal.pio\.pio\libdeps\esp32-s3-devkitc-1\LovyanGFX)
+|   |-- SPI @ 2.0.0 (License: Unknown, Path: C:\Users\berna\.platformio\packages\framework-arduinoespressif32\libraries\SPI)
+|   |-- Wire @ 2.0.0 (License: Unknown, Path: C:\Users\berna\.platformio\packages\framework-arduinoespressif32\libraries\Wire)
+|-- lvgl @ 8.3.11 (License: MIT, Path: C:\Users\berna\Desktop\codes_alunos\codes\s3versaofinal.pio\.pio\libdeps\esp32-s3-devkitc-1\lvgl)
+|-- SerialTransfer @ 3.1.5 (License: Unknown, Path: C:\Users\berna\Desktop\codes_alunos\codes\s3versaofinal.pio\.pio\libdeps\esp32-s3-devkitc-1\SerialTransfer)
+|   |-- Wire @ 2.0.0 (License: Unknown, Path: C:\Users\berna\.platformio\packages\framework-arduinoespressif32\libraries\Wire)
+|   |-- SPI @ 2.0.0 (License: Unknown, Path: C:\Users\berna\.platformio\packages\framework-arduinoespressif32\libraries\SPI)
+|-- SD @ 2.0.0 (License: Unknown, Path: C:\Users\berna\.platformio\packages\framework-arduinoespressif32\libraries\SD)
+|   |-- FS @ 2.0.0 (License: Unknown, Path: C:\Users\berna\.platformio\packages\framework-arduinoespressif32\libraries\FS)
+|   |-- SPI @ 2.0.0 (License: Unknown, Path: C:\Users\berna\.platformio\packages\framework-arduinoespressif32\libraries\SPI)
+|-- SPI @ 2.0.0 (License: Unknown, Path: C:\Users\berna\.platformio\packages\framework-arduinoespressif32\libraries\SPI)
+|-- FS @ 2.0.0 (License: Unknown, Path: C:\Users\berna\.platformio\packages\framework-arduinoespressif32\libraries\FS)
+|-- SD_MMC @ 2.0.0 (License: Unknown, Path: C:\Users\berna\.platformio\packages\framework-arduinoespressif32\libraries\SD_MMC)
+|   |-- FS @ 2.0.0 (License: Unknown, Path: C:\Users\berna\.platformio\packages\framework-arduinoespressif32\libraries\FS)
+Building in release mode
+<lambda>(["checkprogsize"], [".pio\build\esp32-s3-devkitc-1\firmware.elf"])
+MethodWrapper(["checkprogsize"], [".pio\build\esp32-s3-devkitc-1\firmware.elf"])
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [==        ]  22.4% (used 73320 bytes from 327680 bytes)
+Flash: [===       ]  27.3% (used 913433 bytes from 3342336 bytes)
+.pio\build\esp32-s3-devkitc-1\firmware.elf  :
+
+section                                                                                                                         size         addr
+
+.rtc.text                                                                                                                          0   1611653120
+
+.rtc.dummy                                                                                                                         0   1611653120
+
+.rtc.force_fast                                                                                                                    0   1611653120
+
+.rtc_noinit                                                                                                                       16   1342177280
+
+.rtc.force_slow                                                                                                                    0   1342177296
+
+.iram0.vectors                                                                                                                  1027   1077362688
+
+.iram0.text                                                                                                                    63387   1077363716
+
+.dram0.dummy                                                                                                                   48032   1070104576
+
+.dram0.data                                                                                                                    14384   1070152608
+
+.noinit                                                                                                                            0   1070166992
+
+.dram0.bss                                                                                                                     58936   1070166992
+
+.flash.text                                                                                                                   438315   1107296288
+
+.flash_rodata_dummy                                                                                                           458752   1006632992
+
+.flash.appdesc                                                                                                                   256   1007091744
+
+.flash.rodata                                                                                                                 396320   1007092000
+
+.flash.rodata_noload                                                                                                               0   1007488320
+
+.iram0.text_end                                                                                                                    0   1077427103
+
+.iram0.data                                                                                                                        1   1077427103
+
+.iram0.bss                                                                                                                         0   1077427104
+
+.dram0.heap_start                                                                                                                  0   1070225928
+
+.xt.prop                                                                                                                      334116            0
+
+.xt.lit                                                                                                                         9032            0
+
+.xtensa.info                                                                                                                      56            0
+
+.comment                                                                                                                         140            0
+
+.xt.lit._ZN4lgfx2v112color_conv_t13setColorDepthENS0_13color_depth_tE                                                              8            0
+
+.xt.lit._ZN4lgfx2v113color_convertINS0_8rgb888_tENS0_8bgr666_tEEEjj                                                                8            0
+
+.xt.lit._ZN4lgfx2v113color_convertINS0_8rgb888_tENS0_10bgra8888_tEEEjj                                                             8            0
+
+.xt.lit._ZN4lgfx2v113color_convertINS0_8bgr666_tENS0_8rgb888_tEEEjj                                                                8            0
+
+.xt.lit._ZN4lgfx2v113color_convertINS0_8bgr666_tENS0_8bgr888_tEEEjj                                                                8            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb565_tENS0_8bgr666_tEEEjPvjjPS1_                                          8            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb565_tENS0_8bgr888_tEEEjPvjjPS1_                                          0            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8bgr666_tENS0_10bgra8888_tEEEjPvjjPS1_                                       0            0
+
+.xt.lit._ZN4lgfx2v114PointerWrapperD5Ev                                                                                            0            0
+
+.xt.lit._ZN4lgfx2v110Panel_NULLD5Ev                                                                                                0            0
+
+.xt.lit._ZN4lgfx2v114PointerWrapper4readEPhj                                                                                       8            0
+
+.xt.lit._ZN5Print5writeEPKc                                                                                                        8            0
+
+.xt.lit._ZN4lgfx2v18LGFXBase5writeEPKhj                                                                                            0            0
+
+.xt.lit._ZN4lgfx2v16IPanel6effectINS0_17effect_fill_alphaEEEvjjjjOT_                                                               8            0
+
+.xt.lit._ZN4lgfx2v16IPanel28writeFillRectAlphaPreclippedEjjjjj                                                                     0            0
+
+.xt.lit._ZN4lgfx2v18LGFXBaseD5Ev                                                                                                   8            0
+
+.xt.lit._ZN4lgfx2v19LovyanGFXD5Ev                                                                                                  8            0
+
+.xt.lit._ZN4lgfx2v111LGFX_DeviceD5Ev                                                                                               0            0
+
+.xt.prop._ZN4lgfx2v112color_conv_t13setColorDepthENS0_13color_depth_tE                                                           576            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8rgb888_tENS0_8bgr666_tEEEjj                                                              48            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8rgb888_tENS0_10bgra8888_tEEEjj                                                           48            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8bgr666_tENS0_8rgb888_tEEEjj                                                              48            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8bgr666_tENS0_8bgr888_tEEEjj                                                              48            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb565_tENS0_8bgr666_tEEEjPvjjPS1_                                        72            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb565_tENS0_8bgr888_tEEEjPvjjPS1_                                        60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8bgr666_tENS0_10bgra8888_tEEEjPvjjPS1_                                     60            0
+
+.xt.prop._ZN4lgfx2v114PointerWrapperD5Ev                                                                                           0            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULLD5Ev                                                                                               0            0
+
+.xt.prop._ZN4lgfx2v114PointerWrapper4readEPhj                                                                                     48            0
+
+.xt.prop._ZN5Print5writeEPKc                                                                                                      60            0
+
+.xt.prop._ZN4lgfx2v18LGFXBase5writeEPKhj                                                                                          60            0
+
+.xt.prop._ZN4lgfx2v16IPanel6effectINS0_17effect_fill_alphaEEEvjjjjOT_                                                             84            0
+
+.xt.prop._ZN4lgfx2v16IPanel28writeFillRectAlphaPreclippedEjjjjj                                                                   36            0
+
+.xt.prop._ZN4lgfx2v18LGFXBaseD5Ev                                                                                                 12            0
+
+.xt.prop._ZN4lgfx2v19LovyanGFXD5Ev                                                                                                12            0
+
+.xt.prop._ZN4lgfx2v111LGFX_DeviceD5Ev                                                                                              0            0
+
+.xt.prop._ZN5Print17availableForWriteEv                                                                                           36            0
+
+.xt.prop._ZN5Print5flushEv                                                                                                        36            0
+
+.xt.prop._ZN4lgfx2v111DataWrapper4openEPKc                                                                                        36            0
+
+.xt.prop._ZN4lgfx2v111DataWrapper4readEPhjj                                                                                       36            0
+
+.xt.prop._ZN4lgfx2v114PointerWrapper4skipEi                                                                                       36            0
+
+.xt.prop._ZN4lgfx2v114PointerWrapper4seekEj                                                                                       36            0
+
+.xt.prop._ZN4lgfx2v114PointerWrapper5closeEv                                                                                      36            0
+
+.xt.prop._ZN4lgfx2v114PointerWrapper4tellEv                                                                                       36            0
+
+.xt.prop._ZN4lgfx2v1L10no_convertEj                                                                                               36            0
+
+.xt.prop._ZN4lgfx2v1L26convert_uint32_to_palette8Ej                                                                               36            0
+
+.xt.prop._ZN4lgfx2v1L26convert_uint32_to_palette4Ej                                                                               36            0
+
+.xt.prop._ZN4lgfx2v1L26convert_uint32_to_palette2Ej                                                                               36            0
+
+.xt.prop._ZN4lgfx2v1L26convert_uint32_to_palette1Ej                                                                               48            0
+
+.xt.prop._ZN4lgfx2v1L9getSwap16Ej                                                                                                 36            0
+
+.xt.prop._ZN4lgfx2v1L9getSwap24Ej                                                                                                 36            0
+
+.xt.prop._ZN4lgfx2v1L9getSwap32Ej                                                                                                 36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8rgb332_tENS0_8rgb565_tEEEjj                                                              36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8rgb332_tENS0_8rgb888_tEEEjj                                                              36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8rgb332_tENS0_8bgr888_tEEEjj                                                              36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8rgb565_tENS0_8rgb332_tEEEjj                                                              36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8rgb565_tENS0_8rgb888_tEEEjj                                                              36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8rgb565_tENS0_8bgr888_tEEEjj                                                              36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8rgb888_tENS0_8rgb332_tEEEjj                                                              36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8rgb888_tENS0_8rgb565_tEEEjj                                                              36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8rgb888_tENS0_9swap565_tEEEjj                                                             36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8rgb888_tENS0_8bgr888_tEEEjj                                                              36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8rgb888_tENS0_11grayscale_tEEEjj                                                          36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_9swap565_tENS0_8rgb332_tEEEjj                                                             36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_9swap565_tENS0_8rgb888_tEEEjj                                                             36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_9swap565_tENS0_8bgr888_tEEEjj                                                             36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8bgr666_tENS0_8rgb332_tEEEjj                                                              36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8bgr666_tENS0_8rgb565_tEEEjj                                                              36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8bgr888_tENS0_8rgb332_tEEEjj                                                              36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8bgr888_tENS0_8rgb565_tEEEjj                                                              36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_8bgr888_tENS0_8rgb888_tEEEjj                                                              36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_10bgra8888_tENS0_8rgb332_tEEEjj                                                           36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_10bgra8888_tENS0_8rgb565_tEEEjj                                                           36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_10bgra8888_tENS0_8rgb888_tEEEjj                                                           36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_10bgra8888_tENS0_8bgr888_tEEEjj                                                           36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_11grayscale_tENS0_8rgb332_tEEEjj                                                          36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_11grayscale_tENS0_8rgb565_tEEEjj                                                          36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_11grayscale_tENS0_8rgb888_tEEEjj                                                          36            0
+
+.xt.prop._ZN4lgfx2v113color_convertINS0_11grayscale_tENS0_8bgr888_tEEEjj                                                          36            0
+
+.xt.prop._ZN4lgfx2v16IPanel11getScanLineEv                                                                                        36            0
+
+.xt.prop._ZNK4lgfx2v112Panel_Device15getInitCommandsEh                                                                            36            0
+
+.xt.prop._ZNK4lgfx2v112Panel_Device16get_fastread_dirEv                                                                           36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL7initBusEv                                                                                        36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL10releaseBusEv                                                                                    36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL4initEb                                                                                           36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL16beginTransactionEv                                                                              36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL14endTransactionEv                                                                                36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL13setColorDepthENS0_13color_depth_tE                                                              36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL9setInvertEb                                                                                      36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL11setRotationEj                                                                                   36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL8setSleepEb                                                                                       36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL12setPowerSaveEb                                                                                  36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL12writeCommandEjj                                                                                 36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL9writeDataEjj                                                                                     36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL7initDMAEv                                                                                        36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL7waitDMAEv                                                                                        36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL7dmaBusyEv                                                                                        36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL11waitDisplayEv                                                                                   36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL11displayBusyEv                                                                                   36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL7displayEjjjj                                                                                     36            0
+
+.xt.prop._ZNK4lgfx2v110Panel_NULL10isReadableEv                                                                                   36            0
+
+.xt.prop._ZNK4lgfx2v110Panel_NULL11isBusSharedEv                                                                                  36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL10writeBlockEjj                                                                                   36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL9setWindowEjjjj                                                                                   36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL19drawPixelPreclippedEjjj                                                                         36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL23writeFillRectPreclippedEjjjjj                                                                   36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL10writeImageEjjjjPNS0_11pixelcopy_tEb                                                             36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL14writeImageARGBEjjjjPNS0_11pixelcopy_tE                                                          36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL11writePixelsEPNS0_11pixelcopy_tEjb                                                               36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL11readCommandEjjj                                                                                 36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL8readDataEjj                                                                                      36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL8readRectEjjjjPvPNS0_11pixelcopy_tE                                                               36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULL8copyRectEjjjjjj                                                                                  36            0
+
+.xt.prop._ZNK4lgfx2v18LGFXBase15getPalette_implEv                                                                                 36            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15skip_rgb_affineINS0_10bgra8888_tEEEjjjPS1_                                                     60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb565_tES3_EEjPvjjPS1_                                                   60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb565_tENS0_11grayscale_tEEEjPvjjPS1_                                    60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb565_tENS0_8rgb332_tEEEjPvjjPS1_                                        60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb565_tENS0_9swap565_tEEEjPvjjPS1_                                       60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8bgr666_tENS0_8rgb565_tEEEjPvjjPS1_                                        60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_11grayscale_tENS0_8rgb565_tEEEjPvjjPS1_                                    60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8bgr888_tENS0_8rgb565_tEEEjPvjjPS1_                                        60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb332_tENS0_8rgb565_tEEEjPvjjPS1_                                        60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_9swap565_tENS0_8rgb565_tEEEjPvjjPS1_                                       60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb565_tENS0_10bgra8888_tEEEjPvjjPS1_                                     60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_11grayscale_tENS0_10bgra8888_tEEEjPvjjPS1_                                 60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8bgr888_tENS0_10bgra8888_tEEEjPvjjPS1_                                     60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb332_tENS0_10bgra8888_tEEEjPvjjPS1_                                     60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_9swap565_tENS0_10bgra8888_tEEEjPvjjPS1_                                    60            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULLD2Ev                                                                                              36            0
+
+.xt.prop._ZN4lgfx2v114PointerWrapperD2Ev                                                                                          36            0
+
+.xt.prop._ZN4lgfx2v114PointerWrapperD0Ev                                                                                          36            0
+
+.xt.prop._ZN4lgfx2v110Panel_NULLD0Ev                                                                                              36            0
+
+.xt.prop._ZN4lgfx2v16IPanel10startWriteEb                                                                                         36            0
+
+.xt.prop._ZN4lgfx2v16IPanel8endWriteEv                                                                                            48            0
+
+.xt.prop._ZN4lgfx2v18LGFXBase9_clippingERiS2_S2_S2_                                                                               96            0
+
+.xt.prop._ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EED2Ev                                                                 60            0
+
+.xt.prop._ZN4lgfx2v18LGFXBaseD2Ev                                                                                                 36            0
+
+.xt.prop._ZN4lgfx2v18LGFXBaseD0Ev                                                                                                 36            0
+
+.xt.prop._ZN4lgfx2v19LovyanGFXD2Ev                                                                                                36            0
+
+.xt.prop._ZN4lgfx2v19LovyanGFXD0Ev                                                                                                36            0
+
+.xt.prop._ZN4lgfx2v111LGFX_DeviceD2Ev                                                                                             36            0
+
+.xt.prop._ZN4lgfx2v111LGFX_DeviceD0Ev                                                                                             36            0
+
+.xt.prop._ZTVN4lgfx2v114PointerWrapperE                                                                                           12            0
+
+.xt.prop._ZTVN4lgfx2v110Panel_NULLE                                                                                               12            0
+
+.xt.prop._ZTVN4lgfx2v19LovyanGFXE                                                                                                 12            0
+
+.xt.prop._ZTVN4lgfx2v18LGFXBaseE                                                                                                  12            0
+
+.xt.prop._ZTVN4lgfx2v111LGFX_DeviceE                                                                                              12            0
+
+.xt.prop._ZN4lgfx2v15IFont10unloadFontEv                                                                                          36            0
+
+.xt.prop._ZNK4lgfx2v18GLCDfont7getTypeEv                                                                                          36            0
+
+.xt.prop._ZTVN4lgfx2v18GLCDfontE                                                                                                  12            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t15skip_rgb_affineINS0_8bgr888_tEEEjjjPS1_                                                          0            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t19copy_palette_affineINS0_8rgb565_tENS0_8bgr888_tEEEjPvjjPS1_                                      0            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t19copy_palette_affineINS0_11grayscale_tENS0_8bgr888_tEEEjPvjjPS1_                                  0            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t19copy_palette_affineINS0_8bgr666_tENS0_8bgr888_tEEEjPvjjPS1_                                      0            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t19copy_palette_affineINS0_8bgr888_tES3_EEjPvjjPS1_                                                 0            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t19copy_palette_affineINS0_8rgb332_tENS0_8bgr888_tEEEjPvjjPS1_                                      0            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t19copy_palette_affineINS0_9swap565_tENS0_8bgr888_tEEEjPvjjPS1_                                     0            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8bgr888_tES3_EEjPvjjPS1_                                                     0            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8bgr666_tENS0_8bgr888_tEEEjPvjjPS1_                                          0            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_11grayscale_tENS0_8bgr888_tEEEjPvjjPS1_                                      0            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb332_tENS0_8bgr888_tEEEjPvjjPS1_                                          0            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_9swap565_tENS0_8bgr888_tEEEjPvjjPS1_                                         0            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_11grayscale_tENS0_8bgr666_tEEEjPvjjPS1_                                      0            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8bgr888_tENS0_8bgr666_tEEEjPvjjPS1_                                          0            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb332_tENS0_8bgr666_tEEEjPvjjPS1_                                          0            0
+
+.xt.lit._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_9swap565_tENS0_8bgr666_tEEEjPvjjPS1_                                         0            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15skip_rgb_affineINS0_8bgr888_tEEEjjjPS1_                                                        60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t19copy_palette_affineINS0_8rgb565_tENS0_8bgr888_tEEEjPvjjPS1_                                   132            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t19copy_palette_affineINS0_11grayscale_tENS0_8bgr888_tEEEjPvjjPS1_                               132            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t19copy_palette_affineINS0_8bgr666_tENS0_8bgr888_tEEEjPvjjPS1_                                   132            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t19copy_palette_affineINS0_8bgr888_tES3_EEjPvjjPS1_                                              132            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t19copy_palette_affineINS0_8rgb332_tENS0_8bgr888_tEEEjPvjjPS1_                                   132            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t19copy_palette_affineINS0_9swap565_tENS0_8bgr888_tEEEjPvjjPS1_                                  132            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8bgr888_tES3_EEjPvjjPS1_                                                   60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8bgr666_tENS0_8bgr888_tEEEjPvjjPS1_                                        60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_11grayscale_tENS0_8bgr888_tEEEjPvjjPS1_                                    60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb332_tENS0_8bgr888_tEEEjPvjjPS1_                                        60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_9swap565_tENS0_8bgr888_tEEEjPvjjPS1_                                       60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_11grayscale_tENS0_8bgr666_tEEEjPvjjPS1_                                    60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8bgr888_tENS0_8bgr666_tEEEjPvjjPS1_                                        60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb332_tENS0_8bgr666_tEEEjPvjjPS1_                                        60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_9swap565_tENS0_8bgr666_tEEEjPvjjPS1_                                       60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb332_tES3_EEjPvjjPS1_                                                   60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15skip_rgb_affineINS0_8rgb332_tEEEjjjPS1_                                                        60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15skip_rgb_affineINS0_9swap565_tEEEjjjPS1_                                                       60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15skip_rgb_affineINS0_8rgb565_tEEEjjjPS1_                                                        60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15skip_rgb_affineINS0_11grayscale_tEEEjjjPS1_                                                    60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8bgr666_tENS0_9swap565_tEEEjPvjjPS1_                                       60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_11grayscale_tENS0_9swap565_tEEEjPvjjPS1_                                   60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8bgr888_tENS0_9swap565_tEEEjPvjjPS1_                                       60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb332_tENS0_9swap565_tEEEjPvjjPS1_                                       60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_9swap565_tES3_EEjPvjjPS1_                                                  60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8bgr666_tENS0_8rgb332_tEEEjPvjjPS1_                                        60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_11grayscale_tENS0_8rgb332_tEEEjPvjjPS1_                                    60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8bgr888_tENS0_8rgb332_tEEEjPvjjPS1_                                        60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_9swap565_tENS0_8rgb332_tEEEjPvjjPS1_                                       60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8bgr666_tENS0_11grayscale_tEEEjPvjjPS1_                                    60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_11grayscale_tES3_EEjPvjjPS1_                                               60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8bgr888_tENS0_11grayscale_tEEEjPvjjPS1_                                    60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_8rgb332_tENS0_11grayscale_tEEEjPvjjPS1_                                    60            0
+
+.xt.prop._ZN4lgfx2v111pixelcopy_t15copy_rgb_affineINS0_9swap565_tENS0_11grayscale_tEEEjPvjjPS1_                                   60            0
+
+.xt.prop._ZNK4lgfx2v112Panel_Device10isReadableEv                                                                                 36            0
+
+.xt.prop._ZNK4lgfx2v112Panel_Device11isBusSharedEv                                                                                36            0
+
+.xt.prop._ZN4lgfx2v121Panel_FrameBufferBase16beginTransactionEv                                                                   36            0
+
+.xt.prop._ZN4lgfx2v121Panel_FrameBufferBase14endTransactionEv                                                                     36            0
+
+.xt.prop._ZN4lgfx2v121Panel_FrameBufferBase7initDMAEv                                                                             36            0
+
+.xt.prop._ZN4lgfx2v121Panel_FrameBufferBase7waitDMAEv                                                                             36            0
+
+.xt.prop._ZN4lgfx2v121Panel_FrameBufferBase7dmaBusyEv                                                                             36            0
+
+.xt.prop._ZN4lgfx2v121Panel_FrameBufferBase11waitDisplayEv                                                                        36            0
+
+.xt.prop._ZN4lgfx2v121Panel_FrameBufferBase11displayBusyEv                                                                        36            0
+
+.xt.prop._ZN4lgfx2v121Panel_FrameBufferBase9setInvertEb                                                                           36            0
+
+.xt.prop._ZN4lgfx2v121Panel_FrameBufferBase8setSleepEb                                                                            36            0
+
+.xt.prop._ZN4lgfx2v121Panel_FrameBufferBase12setPowerSaveEb                                                                       36            0
+
+.xt.prop._ZN4lgfx2v121Panel_FrameBufferBase11readCommandEjjj                                                                      36            0
+
+.xt.prop._ZN4lgfx2v121Panel_FrameBufferBase8readDataEjj                                                                           36            0
+
+.xt.lit._ZN4lgfx2v18Bus_NULLD5Ev                                                                                                   0            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULLD5Ev                                                                                                  0            0
+
+.xt.prop._ZNK4lgfx2v14IBus8getClockEv                                                                                             36            0
+
+.xt.prop._ZNK4lgfx2v14IBus12getReadClockEv                                                                                        36            0
+
+.xt.prop._ZN4lgfx2v14IBus8setClockEj                                                                                              36            0
+
+.xt.prop._ZN4lgfx2v14IBus12setReadClockEj                                                                                         36            0
+
+.xt.prop._ZN4lgfx2v14IBus9beginReadEj                                                                                             48            0
+
+.xt.prop._ZN4lgfx2v14IBus9readBytesEPhjbb                                                                                         36            0
+
+.xt.prop._ZNK4lgfx2v18Bus_NULL7busTypeEv                                                                                          36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL4initEv                                                                                              36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL7releaseEv                                                                                           36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL16beginTransactionEv                                                                                 36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL14endTransactionEv                                                                                   36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL4waitEv                                                                                              36            0
+
+.xt.prop._ZNK4lgfx2v18Bus_NULL4busyEv                                                                                             36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL7initDMAEv                                                                                           36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL11addDMAQueueEPKhj                                                                                   36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL12execDMAQueueEv                                                                                     36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL12getDMABufferEj                                                                                     36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL5flushEv                                                                                             36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL12writeCommandEjj                                                                                    36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL9writeDataEjj                                                                                        36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL15writeDataRepeatEjjj                                                                                36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL11writePixelsEPNS0_11pixelcopy_tEj                                                                   36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL10writeBytesEPKhjbb                                                                                  36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL9beginReadEv                                                                                         36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL7endReadEv                                                                                           36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL8readDataEj                                                                                          36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL9readBytesEPhjb                                                                                      36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULL10readPixelsEPvPNS0_11pixelcopy_tEj                                                                  36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULLD2Ev                                                                                                 36            0
+
+.xt.prop._ZN4lgfx2v18Bus_NULLD0Ev                                                                                                 36            0
+
+.xt.prop._ZTVN4lgfx2v18Bus_NULLE                                                                                                  12            0
+
+.xt.prop._ZTVN4lgfx2v112Panel_DeviceE                                                                                             12            0
+
+.xt.prop._ZN4lgfx2v13i2c13i2c_context_t8save_regEP9i2c_dev_t                                                                      48            0
+
+.xt.prop._ZN4lgfx2v16ITouch8isEnableEv                                                                                            36            0
+
+.xt.lit._ZN4lgfx2v17Bus_RGBD5Ev                                                                                                    0            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGBD5Ev                                                                                                   0            0
+
+.xt.prop._ZNK4lgfx2v17Bus_RGB7busTypeEv                                                                                           36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGB16beginTransactionEv                                                                                  36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGB14endTransactionEv                                                                                    36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGB4waitEv                                                                                               36            0
+
+.xt.prop._ZNK4lgfx2v17Bus_RGB4busyEv                                                                                              36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGB5flushEv                                                                                              36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGB12writeCommandEjj                                                                                     36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGB9writeDataEjj                                                                                         36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGB15writeDataRepeatEjjj                                                                                 36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGB11writePixelsEPNS0_11pixelcopy_tEj                                                                    36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGB10writeBytesEPKhjbb                                                                                   36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGB7initDMAEv                                                                                            36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGB11addDMAQueueEPKhj                                                                                    36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGB12execDMAQueueEv                                                                                      36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGB9beginReadEv                                                                                          36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGB7endReadEv                                                                                            36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGB8readDataEj                                                                                           36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGB9readBytesEPhjb                                                                                       36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGB10readPixelsEPvPNS0_11pixelcopy_tEj                                                                   36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGBD2Ev                                                                                                  36            0
+
+.xt.prop._ZN4lgfx2v17Bus_RGBD0Ev                                                                                                  36            0
+
+.xt.prop._ZTVN4lgfx2v17Bus_RGBE                                                                                                   12            0
+
+.xt.prop._ZN4lgfx2v19Panel_RGB13setColorDepthENS0_13color_depth_tE                                                                36            0
+
+.xt.prop._ZTVN4lgfx2v19Panel_RGBE                                                                                                 12            0
+
+.xt.lit._ZN4lgfx2v111Touch_GT911D5Ev                                                                                               0            0
+
+.xt.prop._ZN4lgfx2v111Touch_GT911D5Ev                                                                                              0            0
+
+.xt.prop._ZN4lgfx2v111Touch_GT911D2Ev                                                                                             36            0
+
+.xt.prop._ZN4lgfx2v111Touch_GT911D0Ev                                                                                             36            0
+
+.xt.prop._ZTVN4lgfx2v111Touch_GT911E                                                                                              12            0
+
+.xt.lit._ZN4LGFXC5Ev                                                                                                               8            0
+
+.xt.lit._ZN4LGFXD5Ev                                                                                                               0            0
+
+.xt.prop._ZN4LGFXC5Ev                                                                                                             12            0
+
+.xt.prop._ZN4LGFXD5Ev                                                                                                              0            0
+
+.xt.prop._ZN4LGFXC2Ev                                                                                                            120            0
+
+.xt.prop._ZN4LGFXD2Ev                                                                                                             36            0
+
+.xt.prop._ZN4LGFXD0Ev                                                                                                             36            0
+
+.xt.prop._ZTV4LGFX                                                                                                                12            0
+
+.xt.lit._ZN2fs4FileC5ESt10shared_ptrINS_8FileImplEE                                                                                8            0
+
+.xt.lit._ZN2fs4FileD5Ev                                                                                                            0            0
+
+.xt.prop._ZN2fs4FileC5ESt10shared_ptrINS_8FileImplEE                                                                              12            0
+
+.xt.prop._ZN2fs4FileD5Ev                                                                                                           0            0
+
+.xt.prop._ZN2fs4FileC2ESt10shared_ptrINS_8FileImplEE                                                                              48            0
+
+.xt.prop._ZN2fs4FileD2Ev                                                                                                          36            0
+
+.xt.prop._ZN2fs4FileD0Ev                                                                                                          36            0
+
+.xt.prop._ZN6Stream9readBytesEPhj                                                                                                 36            0
+
+.xt.prop._ZTV7TwoWire                                                                                                             12            0
+
+.xt.prop._ZN9PacketCRC9calculateEPhh                                                                                              60            0
+
+.xt.lit._ZN2fs4File9readBytesEPcj                                                                                                  0            0
+
+.xt.prop._ZN2fs4File9readBytesEPcj                                                                                                36            0
+
+.xt.prop._ZTVN2fs4FileE                                                                                                           12            0
+
+.xt.lit._ZNSt15_Sp_counted_ptrIP7VFSImplLN9__gnu_cxx12_Lock_policyE2EED5Ev                                                         0            0
+
+.xt.lit._ZNSt15_Sp_counted_ptrIP7VFSImplLN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv                                               0            0
+
+.xt.prop._ZNSt15_Sp_counted_ptrIP7VFSImplLN9__gnu_cxx12_Lock_policyE2EED5Ev                                                        0            0
+
+.xt.prop._ZNSt15_Sp_counted_ptrIP7VFSImplLN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv                                             36            0
+
+.xt.prop._ZNSt15_Sp_counted_ptrIP7VFSImplLN9__gnu_cxx12_Lock_policyE2EED2Ev                                                       36            0
+
+.xt.prop._ZNSt15_Sp_counted_ptrIP7VFSImplLN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv                                             48            0
+
+.xt.prop._ZNSt15_Sp_counted_ptrIP7VFSImplLN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info                            36            0
+
+.xt.prop._ZNSt15_Sp_counted_ptrIP7VFSImplLN9__gnu_cxx12_Lock_policyE2EED0Ev                                                       36            0
+
+.xt.prop._ZTVSt15_Sp_counted_ptrIP7VFSImplLN9__gnu_cxx12_Lock_policyE2EE                                                          12            0
+
+.xt.prop._ZN14HardwareSerial9readBytesEPcj                                                                                        36            0
+
+.xt.prop._ZNSt14_Function_baseD2Ev                                                                                                36            0
+
+.xt.prop._ZTV14HardwareSerial                                                                                                     12            0
+
+.xt.lit._ZN6String4initEv                                                                                                          0            0
+
+.xt.prop._ZN6String4initEv                                                                                                        36            0
+
+.xt.prop._ZNK6String3lenEv                                                                                                        60            0
+
+.xt.prop._ZN6String6setLenEi                                                                                                      72            0
+
+.xt.lit._ZN3nvs4Lock4initEv                                                                                                        0            0
+
+.xt.prop._ZN3nvs4Lock4initEv                                                                                                      72            0
+
+.xt.lit._ZN14intrusive_listIN3nvs7Storage14NamespaceEntryEE17clearAndFreeNodesEv                                                   0            0
+
+.xt.prop._ZN14intrusive_listIN3nvs7Storage14NamespaceEntryEE17clearAndFreeNodesEv                                                108            0
+
+.xt.prop._ZN14intrusive_listIN3nvs7Storage14NamespaceEntryEE9push_backEPS2_                                                       60            0
+
+.xt.lit._ZN3nvs12NVSPartitionD5Ev                                                                                                  0            0
+
+.xt.prop._ZN3nvs12NVSPartitionD5Ev                                                                                                 0            0
+
+.xt.prop._ZN3nvs12NVSPartitionD2Ev                                                                                                36            0
+
+.xt.prop._ZN3nvs12NVSPartitionD0Ev                                                                                                36            0
+
+.xt.prop._ZTVN3nvs12NVSPartitionE                                                                                                 12            0
+
+.xt.lit._ZN3nvs19NVSPartitionManagerD5Ev                                                                                           0            0
+
+.xt.prop._ZN3nvs19NVSPartitionManagerD5Ev                                                                                          0            0
+
+.xt.prop._ZN3nvs19NVSPartitionManagerD2Ev                                                                                         36            0
+
+.xt.prop._ZN3nvs19NVSPartitionManagerD0Ev                                                                                         36            0
+
+.xt.prop._ZN14intrusive_listIN3nvs12NVSPartitionEE5eraseENS2_8iteratorE                                                           84            0
+
+.xt.prop._ZTVN3nvs19NVSPartitionManagerE                                                                                          12            0
+
+.xt.prop._ZN14intrusive_listIN3nvs8HashList13HashListBlockEE5eraseENS3_8iteratorE                                                 84            0
+
+.xt.lit._ZN3nvs4ItemC5EhNS_8ItemTypeEhPKch                                                                                         0            0
+
+.xt.prop._ZN3nvs4ItemC5EhNS_8ItemTypeEhPKch                                                                                        0            0
+
+.xt.prop._ZN3nvs20isVariableLengthTypeENS_8ItemTypeE                                                                              48            0
+
+.xt.prop._ZN3nvs4ItemC2EhNS_8ItemTypeEhPKch                                                                                       60            0
+
+.xt.prop._ZNK19CompressedEnumTableIN3nvs4Page10EntryStateELj2ELj126EE3getEjPS2_                                                   48            0
+
+.xt.lit._ZN14intrusive_listIN3nvs4PageEE5clearEv                                                                                   0            0
+
+.xt.prop._ZN14intrusive_listIN3nvs4PageEE5clearEv                                                                                 60            0
+
+.xt.prop._ZN14intrusive_listIN3nvs4PageEE9push_backEPS1_                                                                          60            0
+
+.xt.prop._ZN14intrusive_listIN3nvs4PageEE5eraseENS2_8iteratorE                                                                    84            0
+
+.xt.prop._ZTISt9exception                                                                                                         12            0
+
+.xt.prop._ZTISt9bad_alloc                                                                                                         12            0
+
+.xt.lit._ZNK9__gnu_cxx24__concurrence_lock_error4whatEv                                                                            8            0
+
+.xt.lit._ZNK9__gnu_cxx26__concurrence_unlock_error4whatEv                                                                          8            0
+
+.xt.lit._ZN9__gnu_cxx24__concurrence_lock_errorD5Ev                                                                                8            0
+
+.xt.lit._ZN9__gnu_cxx26__concurrence_unlock_errorD5Ev                                                                              8            0
+
+.xt.lit._ZN9__gnu_cxx7__mutex4lockEv                                                                                               8            0
+
+.xt.lit._ZN9__gnu_cxx13__scoped_lockD5Ev                                                                                           8            0
+
+.xt.prop._ZNK9__gnu_cxx24__concurrence_lock_error4whatEv                                                                          48            0
+
+.xt.prop._ZNK9__gnu_cxx26__concurrence_unlock_error4whatEv                                                                        48            0
+
+.xt.prop._ZN9__gnu_cxx24__concurrence_lock_errorD5Ev                                                                              12            0
+
+.xt.prop._ZN9__gnu_cxx26__concurrence_unlock_errorD5Ev                                                                            12            0
+
+.xt.prop._ZN9__gnu_cxx7__mutex4lockEv                                                                                             48            0
+
+.xt.prop._ZN9__gnu_cxx13__scoped_lockD5Ev                                                                                         12            0
+
+.xt.prop._ZN9__gnu_cxx24__concurrence_lock_errorD2Ev                                                                              36            0
+
+.xt.prop._ZN9__gnu_cxx26__concurrence_unlock_errorD2Ev                                                                            36            0
+
+.xt.prop._ZN9__gnu_cxx24__concurrence_lock_errorD0Ev                                                                              36            0
+
+.xt.prop._ZN9__gnu_cxx26__concurrence_unlock_errorD0Ev                                                                            36            0
+
+.xt.prop._ZN9__gnu_cxx13__scoped_lockD2Ev                                                                                         72            0
+
+.xt.prop._ZTIN9__gnu_cxx24__concurrence_lock_errorE                                                                               12            0
+
+.xt.prop._ZTIN9__gnu_cxx26__concurrence_unlock_errorE                                                                             12            0
+
+.xt.prop._ZTVN9__gnu_cxx24__concurrence_lock_errorE                                                                               12            0
+
+.xt.prop._ZTVN9__gnu_cxx26__concurrence_unlock_errorE                                                                             12            0
+
+.xt.prop._ZTVN10__cxxabiv117__class_type_infoE                                                                                    12            0
+
+.xt.prop._ZTISt17bad_function_call                                                                                                12            0
+
+.xt.prop._ZTVSt17bad_function_call                                                                                                12            0
+
+.xt.prop._ZTVN10__cxxabiv120__si_class_type_infoE                                                                                 12            0
+
+.xt.prop._ZTVSt9bad_alloc                                                                                                         12            0
+
+.xt.lit._ZNSt23_Sp_counted_ptr_inplaceI11VFSFileImplSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info           8            0
+
+.xt.lit._ZN7VFSImplD5Ev                                                                                                            0            0
+
+.xt.lit._ZNSt23_Sp_counted_ptr_inplaceI11VFSFileImplSaIS0_ELN9__gnu_cxx12_Lock_policyE2EED5Ev                                      0            0
+
+.xt.lit._ZNK6String10startsWithEPKc                                                                                                0            0
+
+.xt.lit._ZNK6String8endsWithEPKc                                                                                                   0            0
+
+.xt.lit._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI11VFSFileImplSaIS1_ELN9__gnu_cxx12_Lock_policyE2EEEED5Ev             0            0
+
+.xt.lit._ZSt11make_sharedI11VFSFileImplJP7VFSImplRPKcS5_EESt10shared_ptrIT_EDpOT0_                                                 8            0
+
+.xt.lit._ZNSt23_Sp_counted_ptr_inplaceI11VFSFileImplSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv                            0            0
+
+.xt.prop._ZNSt23_Sp_counted_ptr_inplaceI11VFSFileImplSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info         48            0
+
+.xt.prop._ZN7VFSImplD5Ev                                                                                                           0            0
+
+.xt.prop._ZNSt23_Sp_counted_ptr_inplaceI11VFSFileImplSaIS0_ELN9__gnu_cxx12_Lock_policyE2EED5Ev                                     0            0
+
+.xt.prop._ZNK6String10startsWithEPKc                                                                                              60            0
+
+.xt.prop._ZNK6String8endsWithEPKc                                                                                                 60            0
+
+.xt.prop._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI11VFSFileImplSaIS1_ELN9__gnu_cxx12_Lock_policyE2EEEED5Ev            0            0
+
+.xt.prop._ZSt11make_sharedI11VFSFileImplJP7VFSImplRPKcS5_EESt10shared_ptrIT_EDpOT0_                                               72            0
+
+.xt.prop._ZNSt23_Sp_counted_ptr_inplaceI11VFSFileImplSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv                          36            0
+
+.xt.prop._ZN7VFSImplD2Ev                                                                                                          36            0
+
+.xt.prop._ZNSt23_Sp_counted_ptr_inplaceI11VFSFileImplSaIS0_ELN9__gnu_cxx12_Lock_policyE2EED2Ev                                    36            0
+
+.xt.prop._ZN7VFSImplD0Ev                                                                                                          36            0
+
+.xt.prop._ZNSt23_Sp_counted_ptr_inplaceI11VFSFileImplSaIS0_ELN9__gnu_cxx12_Lock_policyE2EED0Ev                                    36            0
+
+.xt.prop._ZNSt23_Sp_counted_ptr_inplaceI11VFSFileImplSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv                          36            0
+
+.xt.prop._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI11VFSFileImplSaIS1_ELN9__gnu_cxx12_Lock_policyE2EEEED2Ev           36            0
+
+.xt.prop._ZTV7VFSImpl                                                                                                             12            0
+
+.xt.prop._ZTV11VFSFileImpl                                                                                                        12            0
+
+.xt.prop._ZTVSt23_Sp_counted_ptr_inplaceI11VFSFileImplSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE                                       12            0
+
+.xt.prop._ZZNSt19_Sp_make_shared_tag5_S_tiEvE5__tag                                                                               12            0
+
+.debug_frame                                                                                                                  174888            0
+
+.debug_info                                                                                                                 10207279            0
+
+.debug_abbrev                                                                                                                 711587            0
+
+.debug_loc                                                                                                                   1474268            0
+
+.debug_aranges                                                                                                                 66752            0
+
+.debug_ranges                                                                                                                 212728            0
+
+.debug_line                                                                                                                  3418614            0
+
+.debug_str                                                                                                                    735361            0
+
+Total                                                                                                                       18838251
+<lambda>(["upload"], [".pio\build\esp32-s3-devkitc-1\firmware.bin"])
+AVAILABLE: cmsis-dap, esp-bridge, esp-builtin, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+BeforeUpload(["upload"], [".pio\build\esp32-s3-devkitc-1\firmware.bin"])
+TimeoutError: Could not automatically find serial port for the `Espressif ESP32-S3-DevKitC-1-N8 (8 MB QD, No PSRAM)` board based on the declared HWIDs=['303A:1001']
+TimeoutError: Could not automatically find serial port based on the known UART bridges
+Auto-detected: COM3
+"C:\Users\berna\.platformio\penv\Scripts\python.exe" "C:\Users\berna\.platformio\packages\tool-esptoolpy\esptool.py" --chip esp32s3 --port "COM3" --baud 460800 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0000 C:\Users\berna\Desktop\codes_alunos\codes\s3versaofinal.pio\.pio\build\esp32-s3-devkitc-1\bootloader.bin 0x8000 C:\Users\berna\Desktop\codes_alunos\codes\s3versaofinal.pio\.pio\build\esp32-s3-devkitc-1\partitions.bin 0xe000 C:\Users\berna\.platformio\packages\framework-arduinoespressif32\tools\partitions\boot_app0.bin 0x10000 .pio\build\esp32-s3-devkitc-1\firmware.bin
+esptool.py v4.11.0
+Serial port COM3
+Connecting...
+
+A serial exception error occurred: Write timeout
+Note: This error originates from pySerial. It is likely not a problem with esptool, but with the hardware connection or drivers.
+For troubleshooting steps visit: https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html
+*** [upload] Error 1
+========================= [FAILED] Took 30.50 seconds =========================
